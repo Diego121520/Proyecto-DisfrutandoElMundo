@@ -1,0 +1,81 @@
+.containerFilterOptions{
+    display: flexbox;
+}
+
+.containerList{
+    text-align: center;
+}
+
+.ulList{
+    position: absolute;
+    background-color: white;
+    width: 49.5px;
+    border: 0.5px solid;
+    border-radius: 1px;
+    top:32px;
+    right: 254px;
+}
+
+.list{
+    width: 89px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right:40px;
+}
+
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerCard{
+    background-color: lawngreen;
+    margin: 20px;
+    border: 2px solid;
+    width: 300px;
+}
+
+.containerCard:hover{
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+
+.image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerUl{
+    position: absolute;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid;
+    top:32px;
+    margin-left: 4px;
+}
+
+.continent,.activity{
+    width: 99px;
+    position: relative;
+    right: 39px;
+}
+
+.btnFilter{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.btnFilter:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
+}

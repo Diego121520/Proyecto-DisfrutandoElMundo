@@ -1,0 +1,17 @@
+.container{
+    /* background-color: #024C86; */
+    /* background-image: url("../../cardsWallpaper.jpg"); */
+    background-color: transparent;
+    background-size:cover;
+    background-attachment: fixed;
+    padding: 20px;
+    display:flex;
+    justify-content: space-evenly;
+    height: 30px;
+}
+
+.home,.activity{
+   position: relative;
+   bottom: 15px;
+   color:white;
+}

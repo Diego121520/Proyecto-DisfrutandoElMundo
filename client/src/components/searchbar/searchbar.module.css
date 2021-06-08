@@ -1,0 +1,39 @@
+.containerSearch{
+    width: 250px;
+    text-align: start;
+}
+
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerCard{
+    background-color: lawngreen;
+    margin: 20px;
+    border: 2px solid;
+    width: 300px;
+}
+
+.containerCard:hover{
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+
+.image{
+    width: 100%;
+    object-position: center center;
+    object-fit: cover;
+}
+
+.button{
+    margin: 5px;
+    background-color: rgb(131, 240, 250);
+    color: black;
+    border: 1px solid;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 2px;
+}

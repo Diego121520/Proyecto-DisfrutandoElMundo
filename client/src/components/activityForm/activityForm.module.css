@@ -1,0 +1,41 @@
+.containerForm{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.containerData{
+    background-color: chartreuse;
+    height: auto;
+}
+
+.select{
+    height: 105px;
+    margin-top: 5px;
+}
+
+.containerSpan{
+    background-color: rgb(26, 223, 69);
+    display: inline-table;
+    flex-wrap: wrap;
+    width: 120px;
+    height: 60px;
+    border: 1px solid;
+    margin: 5px;
+}
+
+.span{
+    position: relative;
+    bottom: 15px;
+
+}
+
+.btn{
+    background-color: red;
+    border: 0.5px solid;
+    position: relative;
+    left: 41.5%;
+    bottom: 6%;
+}
+

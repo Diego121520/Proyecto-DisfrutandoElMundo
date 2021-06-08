@@ -1,0 +1,74 @@
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.totalCountries{
+    color: white;
+}
+
+.countryName{
+    color:black
+}
+
+.continentName{
+    color: black;
+}
+
+.containerCard{
+    background-image: url("../../cards.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    margin: 20px;
+    color: rgba(12, 45, 190, 0.4);
+    border: 2.5px solid;
+    border-radius: 8px;
+    width: 300px;
+        /* border: 2px solid rgba(17, 172, 255, 0.4);
+    box-shadow: 0 0 0 4px rgba(17, 172, 255, 0.4); */
+}
+
+.containerCard:hover{
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+
+.image{
+    width: 100%;
+    object-fit: cover;
+}
+
+button{
+    margin: 5px;
+}
+
+.buttons{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
+}
+
+.prev,.next{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.prev:hover,.next:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
+}

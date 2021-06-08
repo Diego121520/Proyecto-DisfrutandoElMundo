@@ -1,0 +1,88 @@
+.ulList{
+    position: absolute;
+    background-color: white;
+    width: 110px;
+    border: 0.5px solid;
+    border-radius: 1px;
+    top:34px;
+    margin-left: 3px;
+}
+
+li{
+    width: 150px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    position: relative;
+    right:36%;
+}
+
+li:hover{
+    color: white;
+    background-color: rgb(38, 38, 241);
+    cursor: pointer;
+}
+
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerCard{
+    background-color: lawngreen;
+    margin: 20px;
+    border: 2px solid;
+    width: 300px;
+}
+
+.containerCard:hover{
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+
+.button{
+    width: 151px;
+    position: relative;
+    right: 41.4%;
+    top: 5px;
+    background-color: transparent;
+    font-weight: bold;
+    /* border: 0.1px solid; */
+    cursor: pointer;
+
+}
+
+.button:hover{
+    background-color: rgb(38, 38, 241);
+    color: white;
+}
+
+.btnOrder{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btnOrder:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
+}
+
+.image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.liSelected{
+    color: white;
+    background-color: rgb(38, 38, 241) ;
+}
+
+.liDeselected{
+    background-color: white;
+}

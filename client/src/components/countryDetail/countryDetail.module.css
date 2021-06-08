@@ -1,0 +1,37 @@
+.containerCard{
+    margin: 20px;
+    display: block;
+    flex-wrap: wrap;
+}
+
+.containerData{
+    background-color:rgb(64, 167, 109);
+    width: 700px;
+    margin-left: 200px;
+    border: 1px solid;
+}
+ 
+.containerActivities{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+.containerActivity{
+    background-color: springgreen;
+    border: 1px solid;
+    margin: 5px;
+    width: 200px;
+}
+
+.btn{
+    background-color: #DC3545;
+    width: 100%;
+    position: relative;
+    right: 5px;
+    bottom: 6px;
+    border: 0.5px solid;
+    cursor: pointer;
+    font-weight: bold;
+}
