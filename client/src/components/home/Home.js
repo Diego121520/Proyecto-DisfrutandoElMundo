@@ -2,6 +2,7 @@ import React from 'react';
 import {useEffect} from 'react';
 import {Link,useParams} from 'react-router-dom';
 import styles from './home.module.css';
+import earth from '../../tierraGirando.gif';
 
 function Home(){
     const [currentPage,setCurrentPage] = React.useState(null);
@@ -43,7 +44,7 @@ function Home(){
                         <img className={styles.image} src = {country.flagimage} width="250px" height="200px" alt = {country.flagimage}/>
                         </Link>
                        </div>
-            }):(error)?<h1>404<br/>No se encontró la página</h1>:<h1>Cargando...</h1>}  
+            }):(error)?<h1>404<br/>No se encontró la página</h1>:<img src = {earth} width ="250px" height="200px"/>}  
 
         </div>
         <div className = {styles.containerButtons}>

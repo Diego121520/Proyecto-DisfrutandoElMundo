@@ -2,6 +2,7 @@ import React,{useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import styles from './filter.module.css';
+import earth from '../../tierraGirando.gif';
 
 function FilterResults(){
     const{continent,page,activity} = useParams();
@@ -42,8 +43,8 @@ function FilterResults(){
 
     return(
     <div>
-        {results.count && (!activity)?<h2>Total de resultados: {results.count}</h2>:
-        <h2>Total de actividades creadas: {results.count}</h2>}
+        {results.count && (!activity)?<h2 className= {styles.totalCountries}>Total de resultados: {results.count}</h2>:(results.count && activity)?
+        <h2 className= {styles.totalCountries}>Total de actividades creadas: {results.count}</h2>:""}
         <div className = {styles.containerCards}>
             {(results.rows && results.rows.length > 0)? results.rows.map((country,key) => {
                 return <div className = {styles.containerCard} key = {key}>
@@ -53,13 +54,13 @@ function FilterResults(){
                          <img className={styles.image} src = {country.flagimage} width="250px" height="200px" alt = {country.flagimage}/>
                          </Link>
                     </div>
-            }):(error)?<h1>404<br/>No se encontró la página</h1>:(!activity)?<h1>Cargando...</h1>:(activity && results.count === 0)?<h1>Aún no se han creado actividades</h1>:""}
+            }):(error)?<h1 className={styles.error}>404<br/>No se encontró la página</h1>:(!activity)?<img src={earth}/>:(activity && results.count === 0)?<h1>Aún no se han creado actividades</h1>:""}
             
         </div>
         {( (Math.ceil(results.count/10) >= currentPage) && continent)?<div>
         <a href = {(continent)?`/filter-by-continent/${continent}/${currentPage}`:`/filter-by/activity`}> 
-        {currentPage > 1 &&<button onClick = {() =>setCurrentPage(currentPage - 1)}>Anterior</button>}
-        {currentPage < Math.ceil(results.count/10) && <button onClick = {() =>setCurrentPage(currentPage+ 1)}>Siguiente</button>}
+        {currentPage > 1 &&<button className ={styles.prev} onClick = {() =>setCurrentPage(currentPage - 1)}>Anterior</button>}
+        {currentPage < Math.ceil(results.count/10) && <button className ={styles.next} onClick = {() =>setCurrentPage(currentPage+ 1)}>Siguiente</button>}
         </a>
         </div>:""}
         </div>

@@ -5,7 +5,9 @@
 }
 
 .containerData{
-    background-color:rgb(64, 167, 109);
+    background-image: url("../../cards.jpg");
+    background-size:cover;
+    background-attachment: fixed;
     width: 700px;
     margin-left: 200px;
     border: 1px solid;
@@ -19,10 +21,18 @@
 }
 
 .containerActivity{
-    background-color: springgreen;
+    background-image: url("../../activityCard.jpg");
+    background-size:cover;
+    background-attachment: fixed;
     border: 1px solid;
     margin: 5px;
     width: 200px;
+}
+
+.containerActivity:hover{
+    position: relative;
+    left: 10px;
+    bottom: 5px;
 }
 
 .btn{
@@ -34,4 +44,8 @@
     border: 0.5px solid;
     cursor: pointer;
     font-weight: bold;
+}
+
+.activityText{
+    color: white;
 }

@@ -12,7 +12,7 @@ function SearchBar(){
     return(
         <div className = {styles.containerSearch}>
             <div className ={styles.containerReset}>
-            {country.length > 0 && <Link to ={`/`}><input onClick = {() => setCountry("")} type= "button" className={styles.inputButton} value="Limpiar"/></Link>}
+            {country.length > 0 && <Link to ={`/home`}><input onClick = {() => setCountry("")} type= "button" className={styles.inputButton} value="Limpiar"/></Link>}
             </div>
             <div className= {styles.containerInput}>
             <input value = {country} className= {styles.inputSearch} name = "country" placeholder = "Buscar Pais" onChange = {handleInput}/>

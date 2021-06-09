@@ -3,10 +3,16 @@ import SearchBar from '../searchbar/SearchBar';
 import Filter from '../filter/Filter';
 import Ordering from '../ordering/Ordering';
 import styles from './nav.module.css';
+import earth from '../../tierraGirando.gif';
 
 function Nav(){
     return(
        <div className = {styles.container}>
+           <div className = {styles.containerImg}>
+            <Link to="/">
+           <img src = {earth} width = "60px" height="50px" className= {styles.img}/>
+           </Link>
+           </div>
            <SearchBar/>
            <Ordering/>
            <Filter/>

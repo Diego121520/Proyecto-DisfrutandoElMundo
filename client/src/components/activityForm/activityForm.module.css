@@ -6,7 +6,8 @@
 }
 
 .containerData{
-    background-color: chartreuse;
+    background-image: url("../../createActivity.jpg");
+    background-size:cover;
     height: auto;
 }
 
@@ -16,7 +17,7 @@
 }
 
 .containerSpan{
-    background-color: rgb(26, 223, 69);
+    background-color: rgb(21, 141, 47);
     display: inline-table;
     flex-wrap: wrap;
     width: 120px;

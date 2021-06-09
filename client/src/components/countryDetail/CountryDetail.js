@@ -1,21 +1,8 @@
 import React, {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-// import {connect} from 'react-redux';
-// import {getCountryDetail} from '../../actions/index';
 import styles from './countryDetail.module.css';
+import earth from '../../tierraGirando.gif';
 
-
-// function mapStateToProps(state){
-//     return{
-//         countryDetail: state.countryDetail
-//     }
-// }
-
-// function mapDispatchToProps(dispatch){
-//     return{
-//         getCountryDetail: id => dispatch(getCountryDetail(id))
-//     }
-// }
 
 function CountryDetail(){
     const {id} = useParams();
@@ -37,11 +24,19 @@ function CountryDetail(){
         .catch(() => setError(true));
         }
         if(deleteId){
-            fetch(`http://localhost:3001/countries/${id}`)
+            fetch(`http://localhost:3001/delete-activity/${deleteId}`, {
+            method:"DELETE",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+            })
+            .then(() => window.location.reload())
+            .catch((err) => console.log(err));
         }
     
     },[id,deleteId]);
-console.log(deleteId)
+
     let touristActivities = (countryDetail)? countryDetail.touristActivities:"";
     return(
         <div className = {styles.containerCard}>
@@ -57,10 +52,10 @@ console.log(deleteId)
             <h2>Subregión: {countryDetail.subregion}</h2>
             <h2>Area: {countryDetail.area} KM²</h2>
             <h2>Población: {countryDetail.population}</h2>
-            </div>:(error)?<h1>404<br/>No se encontró la página</h1>:<h1>Cargando...</h1>}
+            </div>:(error)?<h1>404<br/>No se encontró la página</h1>:<img src={earth}/>}
             
 
-            {(!error && countryDetail)?<h1>Actividades</h1>:""}
+            {(!error && countryDetail)?<h1 className= {styles.activityText}>Actividades</h1>:""}
             <div className = {styles.containerActivities}>
             {(touristActivities && touristActivities.length > 0 && !error)
             ?touristActivities.map((activity,key) => {

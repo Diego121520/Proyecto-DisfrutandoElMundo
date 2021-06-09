@@ -15,3 +15,13 @@
    bottom: 15px;
    color:white;
 }
+
+.containerImg{
+    position: relative;
+    bottom: 5px;
+    right: 50px;
+}
+
+.img{
+    margin-right: 20px;
+}

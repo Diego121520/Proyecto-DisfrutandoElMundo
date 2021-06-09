@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import {useParams,Link} from 'react-router-dom';
 import styles from './searchbar.module.css';
+import earth from '../../tierraGirando.gif';
 
 function SearchResults(){
     const[results,setResults] = React.useState([]);
@@ -34,7 +35,7 @@ function SearchResults(){
 
     return(
     <div>
-        {results.count && <h2>Total de paises: {results.count}</h2> }
+        {results.count && <h2 className= {styles.totalCountries}>Total de paises: {results.count}</h2> }
         <div className = {styles.containerCards}>
             {(results.rows && results.rows.length > 0)? results.rows.map((country,key) => {
                 return <div className = {styles.containerCard} key = {key}>
@@ -44,13 +45,13 @@ function SearchResults(){
                          <img className={styles.image} src = {country.flagimage} width="250px" height="200px" alt = {country.flagimage}/>
                          </Link>
                     </div>
-            }):(error)?<h1>404<br/>No se encontró la página</h1>:<h1>Cargando...</h1>}
+            }):(error)?<h1 className ={styles.error}>404<br/>No se encontró la página</h1>:<img src={earth}/>}
         </div>
 
         {Math.ceil(results.count/10) >= currentPage?<div>
         <a href = {`/search/${country}/${currentPage}`}>
-        {currentPage > 1 &&<button onClick = {() => setCurrentPage(currentPage - 1)}>Anterior</button>}
-        {currentPage < Math.ceil(results.count/10) && <button onClick = {() => setCurrentPage(currentPage + 1)}>Siguiente</button>}
+        {currentPage > 1 &&<button className ={styles.prev} onClick = {() => setCurrentPage(currentPage - 1)}>Anterior</button>}
+        {currentPage < Math.ceil(results.count/10) && <button className ={styles.next} onClick = {() => setCurrentPage(currentPage + 1)}>Siguiente</button>}
         </a>
         </div>:""}
 

@@ -30,7 +30,11 @@ li:hover{
 }
 
 .containerCard{
-    background-color: lawngreen;
+    background-image: url("../../cards.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    border-radius: 8px;
+    color: rgba(12, 45, 190, 0.4);
     margin: 20px;
     border: 2px solid;
     width: 300px;
@@ -49,7 +53,7 @@ li:hover{
     top: 5px;
     background-color: transparent;
     font-weight: bold;
-    /* border: 0.1px solid; */
+    border: 1px solid;
     cursor: pointer;
 
 }
@@ -85,4 +89,37 @@ li:hover{
 
 .liDeselected{
     background-color: white;
+}
+
+.totalCountries{
+    color: white;
+}
+
+.buttons{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
+}
+
+.prev,.next{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.prev:hover,.next:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
 }

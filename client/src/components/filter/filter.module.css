@@ -13,7 +13,7 @@
     border: 0.5px solid;
     border-radius: 1px;
     top:32px;
-    right: 254px;
+    right: 190px;
 }
 
 .list{
@@ -33,7 +33,11 @@
 }
 
 .containerCard{
-    background-color: lawngreen;
+    background-image: url("../../cards.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    border-radius: 8px;
+    color: rgba(12, 45, 190, 0.4);
     margin: 20px;
     border: 2px solid;
     width: 300px;
@@ -75,6 +79,24 @@
 }
 
 .btnFilter:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
+}
+
+.totalCountries,.error{
+    color: white;
+}
+
+.prev,.next{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.prev:hover,.next:hover{
     color: white;
     background-color:#8F00CD;
     border-color: #8F00CD;

@@ -1,6 +1,31 @@
 .containerSearch{
-    width: 250px;
+    margin-top: 6px;
+    width: 300px;
+    height: 25px;
     text-align: start;
+    display: flex;
+}
+
+.containerInput{
+    position: absolute;
+}
+
+.containerReset{
+    position: relative;
+    margin-right: 103px;
+    right: 63px;
+    bottom: 1px;
+}
+
+.inputSearch{
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 3px;
+}
+
+.inputSearch:focus{
+    border: 2px solid rgba(17, 172, 255, 0.4);
+    box-shadow: 0 0 0 4px rgba(17, 172, 255, 0.4);
 }
 
 .containerCards{
@@ -10,9 +35,13 @@
 }
 
 .containerCard{
-    background-color: lawngreen;
+    background-image: url("../../cards.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    color: rgba(12, 45, 190, 0.4);
     margin: 20px;
     border: 2px solid;
+    border-radius: 8px;
     width: 300px;
 }
 
@@ -28,12 +57,59 @@
     object-fit: cover;
 }
 
-.button{
-    margin: 5px;
-    background-color: rgb(131, 240, 250);
-    color: black;
-    border: 1px solid;
+.containerButton{
+    margin-top: 2px;
+}
+
+.inputButton{
+    margin-right: 8px;
+    background-color: transparent;
+    color: #8F00CD;
+    border: 2px solid;
+    padding: 4px;
     text-decoration: none;
     font-weight: 500;
     border-radius: 2px;
+}
+
+.inputButton:hover{
+    background-color:#8F00CD;
+    color: white;
+    border-color:#8F00CD ;
+}
+
+.button{
+    /* margin: 6px; */
+    margin-left: 8px;
+    background-color: transparent;
+    color: #8F00CD;
+    border: 2px solid;
+    padding: 2px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.button:hover{
+    background-color:#8F00CD;
+    color: white;
+    border-color:#8F00CD ;
+}
+
+.totalCountries,.error{
+    color: white;
+}
+
+.prev,.next{
+    color:#8F00CD;
+    background-color:transparent;
+    border: 2px solid;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.prev:hover,.next:hover{
+    color: white;
+    background-color:#8F00CD;
+    border-color: #8F00CD;
 }
