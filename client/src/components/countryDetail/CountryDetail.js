@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom';
 import styles from './countryDetail.module.css';
 import earth from '../../tierraGirando.gif';
 
-
 function CountryDetail(){
     const {id} = useParams();
     // const[deleteActivity, setDeteleActivity] = React.useState(false);
@@ -52,7 +51,7 @@ function CountryDetail(){
             <h2>Subregión: {countryDetail.subregion}</h2>
             <h2>Area: {countryDetail.area} KM²</h2>
             <h2>Población: {countryDetail.population}</h2>
-            </div>:(error)?<h1>404<br/>No se encontró la página</h1>:<img src={earth}/>}
+            </div>:(error)?<h1 className={styles.error}>404<br/>No se encontró la página</h1>:<img src={earth}/>}
             
 
             {(!error && countryDetail)?<h1 className= {styles.activityText}>Actividades</h1>:""}
@@ -66,7 +65,7 @@ function CountryDetail(){
                     <h4>Duración: {activity.duration}</h4>
                     <h4>Temporada: {activity.season}</h4>
                 </div>
-            }):(!error && touristActivities)?<p>Aún no se han creado actividades</p>:""}</div>
+            }):(!error && touristActivities)?<h4 className={styles.error}>Aún no se han creado actividades</h4>:""}</div>
         </div>
     )};
 

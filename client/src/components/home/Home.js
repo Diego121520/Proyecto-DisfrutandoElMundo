@@ -44,7 +44,7 @@ function Home(){
                         <img className={styles.image} src = {country.flagimage} width="250px" height="200px" alt = {country.flagimage}/>
                         </Link>
                        </div>
-            }):(error)?<h1>404<br/>No se encontró la página</h1>:<img src = {earth} width ="250px" height="200px"/>}  
+            }):(error)?<h1 className={styles.error}>404<br/>No se encontró la página</h1>:<img src = {earth} width ="250px" height="200px"/>}  
 
         </div>
         <div className = {styles.containerButtons}>

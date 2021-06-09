@@ -267,9 +267,9 @@ router.get('/order-by/:ordering', function (req, res) {
     }
 })
 
-router.put('/edit-activity', function (req, res) {
+// router.put('/edit-activity', function (req, res) {
 
-})
+// })
 
 router.delete('/delete-activity/:id', function (req, res) {
     const { id } = req.params;
@@ -277,13 +277,11 @@ router.delete('/delete-activity/:id', function (req, res) {
     TouristActivity.destroy({
         where: { id: id }
     })
-        .then(res => { console.log(res) })
-        .catch(err => console.log(err))
-    // Country.destroy({
-
-    // })
-
-    res.sendStatus(200);
+    .then(res => {
+        return res.sendStatus(200);
+    })
+    .catch(err => console.log(err))
+    return res.sendStatus(500);
 });
 
 module.exports = router;
